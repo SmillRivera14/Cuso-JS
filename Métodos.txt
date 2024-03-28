@@ -1,0 +1,61 @@
+const cities = ['Orlando', 'Dubai', 'Edinburgh', 'Chennai', 'Accra', 'Denver', 'Eskisehir', 'Medellin', 'Yokohama'];
+
+const nums = [1, 50, 75, 200, 350, 525, 1000];
+
+//  Choose a method that will return undefined
+cities.forEach(city => console.log('Have you visited ' + city + '?'));
+
+// Choose a method that will return a new array
+const longCities = cities.filter(city => city.length > 7);
+
+// Choose a method that will return a single value
+const word = cities.reduce((acc, currVal) => {
+  return acc + currVal[0]
+}, "C");
+
+console.log(word)
+
+// Choose a method that will return a new array
+const smallerNums = nums.map(num => num - 5);
+
+// Choose a method that will return a boolean value
+nums.some(num => num < 0);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Vamos a analizar cada bloque de código:
+
+1. **`forEach` method:**
+   ```javascript
+   cities.forEach(city => console.log('Have you visited ' + city + '?'));
+   ```
+   Este código utiliza el método `forEach` para iterar sobre cada elemento en el array `cities`. La función de flecha proporcionada se ejecuta una vez para cada elemento del array, imprimiendo un mensaje para cada ciudad en la consola. Sin embargo, el método `forEach` siempre devuelve `undefined`.
+
+2. **`filter` method:**
+   ```javascript
+   const longCities = cities.filter(city => city.length > 7);
+   ```
+   El método `filter` se utiliza para crear un nuevo array llamado `longCities` que contiene solo las ciudades con más de 7 caracteres de longitud.
+
+3. **`reduce` method:**
+   ```javascript
+   const word = cities.reduce((acc, currVal) => {
+     return acc + currVal[0]
+   }, "C");
+   console.log(word);
+   ```
+   Aquí, el método `reduce` se utiliza para reducir el array `cities` a un solo valor. En este caso, se está construyendo una cadena (`word`) que contiene la primera letra de cada ciudad en el array, comenzando con la letra "C" (el valor inicial proporcionado).
+
+4. **`map` method:**
+   ```javascript
+   const smallerNums = nums.map(num => num - 5);
+   ```
+   Utiliza el método `map` para crear un nuevo array (`smallerNums`) donde cada número en el array original `nums` se reduce en 5.
+
+5. **`some` method:**
+   ```javascript
+   const hasNegativeNums = nums.some(num => num < 0);
+   ```
+   Se ha modificado ligeramente para ser más claro. Este código utiliza el método `some` para verificar si al menos un número en el array `nums` es menor que 0. Retorna `true` si al menos uno cumple con la condición, de lo contrario, retorna `false`.
